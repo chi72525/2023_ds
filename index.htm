@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Rainbow Text</title>
-    <style>
-      #text {
-        font-size: 24px;
-        transition: color 0.5s;
-      }
-    </style>
-  </head>
-  <body>
-    <button onclick="showRainbowText()">É{É^ÉìÇâüÇ∑</button>
-    <p id="text">Hello world</p>
+<head>
+  <style>
+    #rotateText {
+      font-size: 24px;
+      transform-origin: center;
+      animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <button onclick="showSushi()">„Éú„Çø„É≥„Çí„ÇØ„É™„ÉÉ„ÇØ</button>
+  <div id="sushiText" style="display: none;">
+    <p id="rotateText">ÂØøÂè∏</p>
+  </div>
 
-    <script>
-      function showRainbowText() {
-        var textElement = document.getElementById("text");
-        var colors = [
-          "red",
-          "orange",
-          "yellow",
-          "green",
-          "blue",
-          "indigo",
-          "violet"
-        ];
-        var currentColor = 0;
-
-        setInterval(function() {
-          textElement.style.color = colors[currentColor];
-          currentColor = (currentColor + 1) % colors.length;
-        }, 500);
-      }
-    </script>
-  </body>
+  <script>
+    function showSushi() {
+      document.getElementById('sushiText').style.display = 'block';
+    }
+  </script>
+</body>
 </html>
